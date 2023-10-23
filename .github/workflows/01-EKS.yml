@@ -4,7 +4,7 @@ on:
 
 jobs:
   Plan:
-    uses: RekhuGopal/aws_eks_labs/.github/workflows/aws_tf_plan.yml@main
+    uses: Ladi4U/aws_eks_labs/.github/workflows/aws_tf_plan.yml@main
     with:
       gh_environment: dev
     secrets:
