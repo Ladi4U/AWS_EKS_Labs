@@ -8,17 +8,17 @@ module "eks" {
   endpoint_public_access  = true
   endpoint_private_access = false
   public_access_cidrs     = ["0.0.0.0/0"]
-  node_group_name         = "cloudquicklabs"
-  scaling_desired_size    = 1
-  scaling_max_size        = 1
+  node_group_name         = "MontrealCollege"
+  scaling_desired_size    = 4
+  scaling_max_size        = 5
   scaling_min_size        = 1
   instance_types          = ["t3.small"]
-  key_pair                = "TestKeyPair"
+  key_pair                = "EC2 Key"
 }
 
 module "vpc" {
   source                  = "./modules/vpc"
-  tags                    = "cloudquicklabs"
+  tags                    = "MontrealCollege"
   instance_tenancy        = "default"
   vpc_cidr                = "10.0.0.0/16"
   access_ip               = "0.0.0.0/0"
